@@ -7,12 +7,13 @@ cd mental-health-counselor-assist
 ```
 
 ## Backend
+Please add your OpenAI API key before running the backend as it caches the key value and is resistant to updates.
 ```bash
     cd backend
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    python3 -m venv venv
+    source venv/bin/activate  
     pip install -r requirements.txt
-    python train_model.py  # Train and save the ML model
+    python3 train_model.py  # Train and save the ML model
     uvicorn main:app --reload
 ```
 
@@ -23,6 +24,8 @@ cd mental-health-counselor-assist
 ```bash
 cd ../frontend
 npm install
+npm install -D tailwindcss postcss autoprefixer
+npm install @vitejs/plugin-react
 npm run dev
 ```
 
